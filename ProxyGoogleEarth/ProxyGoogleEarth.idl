@@ -1,0 +1,36 @@
+// ProxyGoogleEarth.idl : IDL source for ProxyGoogleEarth
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ProxyGoogleEarth.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(9B3B355A-CE8B-499A-AE16-255EBB4BD2DA),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IGoogleEarth : IDispatch{
+	[id(1)] HRESULT IrACoordenadas([in] DOUBLE latitud, [in] DOUBLE longitud);
+	[id(2)] HRESULT GetCoordenadas([out] DOUBLE* latitud, [out] DOUBLE* longitud);
+};
+[
+	uuid(F5EEF57F-A3DC-4573-9CDB-E4394F6FDE7C),
+	version(1.0),
+]
+library ProxyGoogleEarthLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(A5E774EB-F9AF-4BB4-BC0F-6C5CC8828442)		
+	]
+	coclass GoogleEarth
+	{
+		[default] interface IGoogleEarth;
+	};
+};
+

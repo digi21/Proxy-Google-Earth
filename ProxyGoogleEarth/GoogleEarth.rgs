@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {A5E774EB-F9AF-4BB4-BC0F-6C5CC8828442} = s 'GoogleEarth Class'
+		{
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{F5EEF57F-A3DC-4573-9CDB-E4394F6FDE7C}'
+			Version = s '1.0'
+		}
+	}
+}

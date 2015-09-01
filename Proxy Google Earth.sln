@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProxyGoogleEarth", "ProxyGoogleEarth\ProxyGoogleEarth.vcxproj", "{80988993-414C-4F11-A9C5-327D474FC1A9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProxyGoogleEarthPS", "ProxyGoogleEarth\ProxyGoogleEarthPS.vcxproj", "{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{80988993-414C-4F11-A9C5-327D474FC1A9} = {80988993-414C-4F11-A9C5-327D474FC1A9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cliente", "cliente\cliente.vcxproj", "{444B3965-9103-41BA-B980-7F47CC8BA983}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80988993-414C-4F11-A9C5-327D474FC1A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{80988993-414C-4F11-A9C5-327D474FC1A9}.Debug|Win32.Build.0 = Debug|Win32
+		{80988993-414C-4F11-A9C5-327D474FC1A9}.Debug|x64.ActiveCfg = Debug|Win32
+		{80988993-414C-4F11-A9C5-327D474FC1A9}.Release|Win32.ActiveCfg = Release|Win32
+		{80988993-414C-4F11-A9C5-327D474FC1A9}.Release|Win32.Build.0 = Release|Win32
+		{80988993-414C-4F11-A9C5-327D474FC1A9}.Release|x64.ActiveCfg = Release|Win32
+		{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}.Debug|Win32.Build.0 = Debug|Win32
+		{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}.Debug|x64.ActiveCfg = Debug|Win32
+		{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}.Release|Win32.ActiveCfg = Release|Win32
+		{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}.Release|Win32.Build.0 = Release|Win32
+		{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}.Release|x64.ActiveCfg = Release|Win32
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Debug|Win32.ActiveCfg = Debug|Win32
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Debug|Win32.Build.0 = Debug|Win32
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Debug|x64.ActiveCfg = Debug|x64
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Debug|x64.Build.0 = Debug|x64
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Release|Win32.ActiveCfg = Release|Win32
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Release|Win32.Build.0 = Release|Win32
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Release|x64.ActiveCfg = Release|x64
+		{444B3965-9103-41BA-B980-7F47CC8BA983}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

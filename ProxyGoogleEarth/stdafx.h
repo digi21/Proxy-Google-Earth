@@ -28,4 +28,6 @@
 #include <atlctl.h>
 
 #import "C:\\Program Files (x86)\\Google\\Google Earth\\client\\googleearth.exe"
+
+#include <memory>
 #endif

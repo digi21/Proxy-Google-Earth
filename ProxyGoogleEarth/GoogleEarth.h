@@ -23,8 +23,6 @@ class ATL_NO_VTABLE CGoogleEarth :
 	public CComCoClass<CGoogleEarth, &CLSID_GoogleEarth>,
 	public IDispatchImpl<IGoogleEarth, &IID_IGoogleEarth, &LIBID_ProxyGoogleEarthLib, /*wMajor =*/ 1, /*wMinor =*/ 0>
 {
-	EARTHLib::IApplicationGEPtr googleEarth;
-
 public:
 	CGoogleEarth()
 	{
@@ -52,11 +50,12 @@ END_COM_MAP()
 	}
 
 public:
-
-
-
 	STDMETHOD(IrACoordenadas)(DOUBLE latitud, DOUBLE longitud);
 	STDMETHOD(GetCoordenadas)(DOUBLE* latitud, DOUBLE* longitud);
+
+private:
+	STDMETHOD(GetPropiedadDouble)(IDispatchPtr camara, LPOLESTR nombrePropiedad, DOUBLE& resultado);
+	STDMETHOD(GetCamara)(IDispatchPtr aplicacion, IDispatchPtr& camara);
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(GoogleEarth), CGoogleEarth)

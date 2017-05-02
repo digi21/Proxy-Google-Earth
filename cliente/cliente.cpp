@@ -11,9 +11,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	if( S_OK == hr ) {
 		try {
 			double latitud, longitud;
-			proxy->GetCoordenadas(&longitud, &latitud);
+			proxy->GetCoordenadas(&latitud, &longitud);
 
-			hr = proxy->IrACoordenadas(40, 0);
+			hr = proxy->IrACoordenadas(latitud+0.001, longitud);
 			MessageBox(NULL, L"Bien", L"Bien", MB_OK);
 		} 
 		catch(_com_error& e)

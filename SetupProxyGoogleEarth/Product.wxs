@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Proxy Google Earth" Language="1033" Version="1.0.0.0" Manufacturer="Digi21" UpgradeCode="f76765a6-b3ca-456c-9a13-69f4de6fd7af">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <Media Id="1" Cabinet="SetupProxyGoogleEarth.cab" EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="SetupProxyGoogleEarth" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="Digi21.net" Name="Digi21.net">
+          <Directory Id="Digi3DNET" Name="Digi3D.NET"/>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="Digi3DNET">
+      <Component Id="CMP_ProxyGoogleEarth.exe"
+                   Guid="*">
+        <File Id="FILE_Digi3D.chm"
+              Source="$(var.DirectorioPrograma)ProxyGoogleEarth.exe"
+              KeyPath="yes"
+              Vital="yes"/>
+
+        <!-- Registramos la clase -->
+        <RegistryKey Root="HKCR" Key="CLSID">
+          <RegistryKey Key="{A5E774EB-F9AF-4BB4-BC0F-6C5CC8828442}">
+            <RegistryValue Type="string" Value="GoogleEarth Class"/>
+
+            <RegistryKey Key="LocalServer32">
+              <RegistryValue Type="string" Value="[Digi3DNET]ProxyGoogleEarth.exe"/>
+            </RegistryKey>
+
+            <RegistryKey Key="Programmable"/>
+
+            <RegistryKey Key="TypeLib">
+              <RegistryValue Type="string" Value="{F5EEF57F-A3DC-4573-9CDB-E4394F6FDE7C}"/>
+            </RegistryKey>
+
+            <RegistryKey Key="Version">
+              <RegistryValue Type="string" Value="1.0"/>
+            </RegistryKey>
+          </RegistryKey>
+        </RegistryKey>
+
+
+        <!-- Registramos el interface -->
+        <RegistryKey Root="HKCR" Key="Interface">
+          <RegistryKey Key="{9B3B355A-CE8B-499A-AE16-255EBB4BD2DA}">
+            <RegistryValue Type="string" Value="IGoogleEarth" />
+
+            <RegistryKey Key="ProxyStubClsid32">
+              <RegistryValue Type="string" Value="{00020424-0000-0000-C000-000000000046}" />
+            </RegistryKey>
+
+            <RegistryKey Key="TypeLib">
+              <RegistryValue Type="string" Value="{F5EEF57F-A3DC-4573-9CDB-E4394F6FDE7C}" />
+              <RegistryValue Type="string" Name="Version" Value="1.0" />
+            </RegistryKey>
+          </RegistryKey>
+        </RegistryKey>
+
+
+        <!-- Registramos la librería de tipos -->
+        <RegistryKey Root="HKCR" Key="TypeLib">
+          <RegistryKey Key="{F5EEF57F-A3DC-4573-9CDB-E4394F6FDE7C}">
+            <RegistryKey Key="1.0">
+              <RegistryValue Type="string" Value="ProxyGoogleEarthLib" />
+              <RegistryKey Key="0">
+                <RegistryKey Key="win32">
+                  <RegistryValue Type="string" Value="[Digi3DNET]ProxyGoogleEarth.exe"/>
+                </RegistryKey>
+              </RegistryKey>
+              <RegistryKey Key="FLAGS">
+                <RegistryValue Type="string" Value="0"/>
+              </RegistryKey>
+              <RegistryKey Key="HELPDIR">
+                <RegistryValue Type="string" Value="[Digi3DNET]"/>
+              </RegistryKey>
+            </RegistryKey>
+          </RegistryKey>
+        </RegistryKey>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

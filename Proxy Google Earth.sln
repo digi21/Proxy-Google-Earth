@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProxyGoogleEarth", "ProxyGoogleEarth\ProxyGoogleEarth.vcxproj", "{80988993-414C-4F11-A9C5-327D474FC1A9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProxyGoogleEarthPS", "ProxyGoogleEarth\ProxyGoogleEarthPS.vcxproj", "{C45751FB-A9B1-4288-A8EB-2EC62D730D3D}"
@@ -9,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProxyGoogleEarthPS", "Proxy
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cliente", "cliente\cliente.vcxproj", "{444B3965-9103-41BA-B980-7F47CC8BA983}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupProxyGoogleEarth", "SetupProxyGoogleEarth\SetupProxyGoogleEarth.wixproj", "{E0771FBB-6DF4-4985-B38F-7152944EA221}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +42,12 @@ Global
 		{444B3965-9103-41BA-B980-7F47CC8BA983}.Release|Win32.Build.0 = Release|Win32
 		{444B3965-9103-41BA-B980-7F47CC8BA983}.Release|x64.ActiveCfg = Release|x64
 		{444B3965-9103-41BA-B980-7F47CC8BA983}.Release|x64.Build.0 = Release|x64
+		{E0771FBB-6DF4-4985-B38F-7152944EA221}.Debug|Win32.ActiveCfg = Debug|x86
+		{E0771FBB-6DF4-4985-B38F-7152944EA221}.Debug|Win32.Build.0 = Debug|x86
+		{E0771FBB-6DF4-4985-B38F-7152944EA221}.Debug|x64.ActiveCfg = Debug|x86
+		{E0771FBB-6DF4-4985-B38F-7152944EA221}.Release|Win32.ActiveCfg = Release|x86
+		{E0771FBB-6DF4-4985-B38F-7152944EA221}.Release|Win32.Build.0 = Release|x86
+		{E0771FBB-6DF4-4985-B38F-7152944EA221}.Release|x64.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
